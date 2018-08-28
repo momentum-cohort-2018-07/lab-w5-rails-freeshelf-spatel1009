@@ -1,0 +1,16 @@
+<% provide(:title, 'Register Here') %>
+<h1> Register as New User Here!</h1>
+
+<div class="row">
+    <div class="col-6 col-3">
+        <%= form_for(@user) do |f| %>
+            <%= f.label :user_name %>
+            <%= f.text_field :user_name %>
+
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+
+            <%= f.submit "Create My Account", class: "btn btn-primary" %>
+        <%end%>
+    </div>
+</div>

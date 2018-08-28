@@ -1,0 +1,30 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.home {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 300px;
+    color:white;
+    font-size:4rem;
+}
+
+.home_p {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 300px;
+    color:mintcream;
+    font-size:2rem
+}
+
+.home_div {
+    background-image: url("https://static.boredpanda.com/blog/wp-content/uploads/2015/01/amazing-libraries-27__880.jpg");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    opacity: 0.5;
+}
+
+.home_a {
+    text-decoration: none;
+}
