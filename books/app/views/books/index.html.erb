@@ -7,8 +7,31 @@
 <h1 class=main_book> Books </h1>
 
 
-    
+<%= form_with scope: :book, url: books_path, local: true do |form| %>
+
     <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>URL</th>
+        </tr>
+        <tr>
+            <td class = blanks><%= form.text_field :title %></td>
+            <td class = blanks><%= form.text_field :author %></td>
+            <td class = blanks><%= form.text_field :description %></td>
+            <td class = blanks><%= form.url_field :url %></td>
+            <td><%= form.submit  %>
+            
+        </tr>
+    </table>
+    
+    <% end %>
+    
+
+
+
+<table>
         <tr>
             <th>Title</th>
             <th>Author</th>
@@ -35,23 +58,3 @@
 
 
 
-<%= form_with scope: :book, url: books_path, local: true do |form| %>
-
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Description</th>
-        <th>URL</th>
-    </tr>
-    <tr>
-        <td class = blanks><%= form.text_field :title %></td>
-        <td class = blanks><%= form.text_field :author %></td>
-        <td class = blanks><%= form.text_field :description %></td>
-        <td class = blanks><%= form.url_field :url %></td>
-        <td><%= form.submit  %>
-        
-    </tr>
-</table>
-
-<% end %>
