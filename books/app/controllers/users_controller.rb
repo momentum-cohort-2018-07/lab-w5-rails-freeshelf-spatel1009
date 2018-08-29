@@ -1,30 +1,24 @@
 class UsersController < ApplicationController
-  def index
-    @user = User.all
-  end
-  
   def new
-    @user = User.new
+    @user=User.new
   end
 
-  def show
-    @user = User.find(params[:id])
-  end 
+  def index
+    @users=User.all
+  end
 
   def create
     @user=User.new(user_params)
     if @user.save
-      flash[:success]="Create Successful"
+      flash[:success]="Login Successful"
     redirect_to books_path
-    else
-      flash[:error]=@user.errors
-    redirect_to users_new_path
+    else 
+      flash[:error]="Login failed, please try again"
+      redirect_to users_path
     end
-  end
-
-  private
+  end 
 
   def user_params 
-    params.require(:user).permit(:user_name, :password)
+    params.require(:user).permit(:email, :password)
   end
 end

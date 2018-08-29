@@ -1,23 +1,3 @@
-<% provide(:title, 'Register Here') %>
-<h1 class=> Register as New User Here!</h1>
+<h1>Register To Become A New User!</h1>
 
-<div>
-    
-        <%= form_for(@user) do |f| %>
-            
-            <%= f.label :name %>
-            <%= f.text_field :user_name %>
-            
-            
-            <%= f.label :password %>
-            <div class = "col-sm-9">
-            <%= f.password_field :password %>
-            </div>
-            </div>
 
-            <%= f.submit "Create My Account", class: "btn btn-primary" %>
-            
-        <%end%>
-    </div>
-</div>
-</div>

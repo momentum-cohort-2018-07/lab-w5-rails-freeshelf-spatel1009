@@ -1,5 +1,14 @@
 class User < ApplicationRecord
-    has_many :books
-    validates_presence_of :user_name, length: {minimum: 5}
-    validates_uniqueness_of :user_name
+has_many :books
+
+before_save { self.email = email.downcase }
+
+validates :name, presence: true
+
+VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: VALID_EMAIL_REGEX }
+
+validates :password, presence: true, length: { minimum: 6 }
+has_secure_password
 end

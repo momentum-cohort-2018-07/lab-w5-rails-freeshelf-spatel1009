@@ -9,9 +9,9 @@ require "faker"
 # Destroys all books and resets, no duplicates
 Book.destroy_all 
 User.destroy_all
-10.times do |d|
+20.times do |d|
 
-user=User.create!(user_name: Faker::Internet.username(5..10), password: Faker::Internet.password(10,20))
+user=User.create!(name: Faker::Name.name(5..10), password: Faker::Internet.password(10,20))
 end 
 
 100.times do |l|

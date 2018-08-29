@@ -20,6 +20,7 @@ class BooksController < ApplicationController
   end
   def create
     @book=Book.new(book_params)
+    @book.user_id = session[:user_id]
     if @book.save
       flash[:success]="Create Successful"
     redirect_to books_path

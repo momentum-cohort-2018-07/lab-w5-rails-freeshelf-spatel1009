@@ -4,6 +4,9 @@
 <% if flash[:success] %>
 <%= flash[:success] %>
 <%end%>
+<% if flash[:success_message] %>
+<% flash[:success_message] %>
+<%end%>
 <h1 class=main_book> Books </h1>
 
 
@@ -21,7 +24,8 @@
             <td class = blanks><%= form.text_field :author %></td>
             <td class = blanks><%= form.text_field :description %></td>
             <td class = blanks><%= form.url_field :url %></td>
-            <td><%= form.submit  %>
+            
+            <td><%= form.submit  %></td>
             
         </tr>
     </table>
