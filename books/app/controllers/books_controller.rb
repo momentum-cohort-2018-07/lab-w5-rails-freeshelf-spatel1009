@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   def destroy
     setBook
     if @book.destroy
-      flash[:success]="Delete Successful"
+      flash[:success_message]="Delete Successful"
     end
     redirect_to books_path
   end

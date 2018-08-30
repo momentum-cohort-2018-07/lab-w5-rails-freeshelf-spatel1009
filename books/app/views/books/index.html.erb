@@ -2,7 +2,7 @@
 <%= flash[:error] %>
 <%end%>
 <% if flash[:success] %>
-<%= flash[:success] %>
+<div class="alert alert-success">Welcome to the Book Library!</div>
 <%end%>
 <% if flash[:success_message] %>
 <% flash[:success_message] %>
@@ -24,6 +24,7 @@
             <td class = blanks><%= form.text_field :author %></td>
             <td class = blanks><%= form.text_field :description %></td>
             <td class = blanks><%= form.url_field :url %></td>
+        
             
             <td><%= form.submit  %></td>
             
@@ -50,7 +51,7 @@
              <td class = blanks><%= book.description %></td>
              <td class = blanks><%= book.url %></td>
              <% if book.user %>
-             <td class = blanks><%= book.user.user_name%></td>
+             <td class = blanks><%= book.user_id %></td>
              <% end %>
              <td><%= link_to "Edit", edit_book_path(book) %>
              <td><%= link_to "Destroy", book, method: :delete %>

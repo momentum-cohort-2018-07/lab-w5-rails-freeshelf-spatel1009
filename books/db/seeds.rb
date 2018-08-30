@@ -7,13 +7,19 @@ require "faker"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # Destroys all books and resets, no duplicates
+require 'faker'
 Book.destroy_all 
 User.destroy_all
-20.times do |d|
 
-user=User.create!(name: Faker::Name.name(5..10), password: Faker::Internet.password(10,20))
+10.times do |l|
+User.create(
+    name: Faker::Name.name, 
+    password: Faker::Internet.password(10,20),email: Faker::Internet.email)
 end 
 
 100.times do |l|
-    Book.create!({title: Faker::Book.unique.title, author: Faker::Name.unique.name, url: Faker::Internet.url,description: Faker::Lorem.sentence, user: User.order("RANDOM()").first})
+    Book.create(
+        title: Faker::Book.unique.title, author: Faker::Name.unique.name, 
+        url: Faker::Internet.url,
+        description: Faker::Lorem.sentence, user: User.order("RANDOM()").first)
 end

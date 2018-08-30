@@ -13,12 +13,12 @@ class UsersController < ApplicationController
       flash[:success]="Login Successful"
     redirect_to books_path
     else 
-      flash[:error]="Login failed, please try again"
-      redirect_to users_path
+      render 'new'
     end
   end 
+private
 
   def user_params 
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email,:name,:password)
   end
 end
