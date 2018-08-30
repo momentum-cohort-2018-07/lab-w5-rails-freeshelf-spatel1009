@@ -4,7 +4,7 @@
 .home {
     text-align: center;
     margin: 0 auto;
-    padding-top: 300px;
+    padding-top: 250px;
     color:white;
     font-size:4rem;
 }
@@ -12,23 +12,29 @@
 .home_p {
     text-align: center;
     margin: 0 auto;
-    padding-top: 30px;
-    padding-bottom: 300px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     color:mintcream;
     font-size:2rem
+}
+
+.home_2 {
+    padding-bottom:150px;
 }
 
 .home_div {
     background-image: url("https://static.boredpanda.com/blog/wp-content/uploads/2015/01/amazing-libraries-27__880.jpg");
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: 150%;
     opacity: 0.5;
 }
 
 .home_a {
     text-decoration: none;
+    color: mintcream;
 }
 
 .home_a:hover {
     text-decoration: none;
+    color: blue;
 }
