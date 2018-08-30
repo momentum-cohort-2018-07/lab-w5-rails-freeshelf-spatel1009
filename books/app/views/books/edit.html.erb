@@ -1,0 +1,15 @@
+<%= form_for @book, url: {action:"update"} do |form| %>
+
+<%= form.label :title %>
+<%= form.text_field :title %>
+<%= form.label :author %>
+<%= form.text_field :author %>
+<%= form.label :description %>
+<%= form.text_field :description %>
+<%= form.label :url %>
+<%= form.text_field :url %>
+
+<%= form.submit %>
+
+
+<% end %>
